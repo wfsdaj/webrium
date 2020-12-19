@@ -1,9 +1,12 @@
 <?php
-use webrium\foxql\db as DB;
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use webrium\mysql\DB;
+
 
 $config=[];
 
-$config=[
+$config['main']=[
   'driver'=>'mysql' ,
   'db_host'=>'localhost' ,
   'db_host_port'=>3306 ,
@@ -14,4 +17,8 @@ $config=[
   'result_stdClass'=>true
 ];
 
-DB::addConfig('main',$config);
+DB::setConfig($config);
+
+$get = DB::table('users')->get();
+
+echo json_encode($get);

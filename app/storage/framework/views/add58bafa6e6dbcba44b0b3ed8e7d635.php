@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php foreach ($GLOBALS as $key => $value) {${$key}=$value;}; $_all = $GLOBALS; ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -21,15 +21,15 @@
         <strong>Hello World</strong>
       </div>
       <div class="">
-        <!-- <strong> @url( 'hello'.input('u', ('') ) ) </strong> -->
+        <!-- <strong> <?= url( 'hello'.input('u', ('') ) ); ?> </strong> -->
         <div class="">
-          {{''.$sd}}
+          <?php echo htmlspecialchars(''.$sd); ?>
 
 
-          {{''.$sd2}}
+          <?php echo htmlspecialchars(''.$sd2); ?>
 
 
-          {{''.$sd3}}
+          <?php echo htmlspecialchars(''.$sd3); ?>
         </div>
       </div>
     </div>

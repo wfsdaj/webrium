@@ -12,10 +12,9 @@ App::root(__DIR__.'/..');
 
 
 Debug::displayErrors(true);
-
+// Debug::showErrorsStatus(false);
 // load default directory structure
 Directory::initDefaultStructure();
-
 // load config
 File::source('config',['config.php','db.php']);
 
