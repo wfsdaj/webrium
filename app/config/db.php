@@ -1,9 +1,10 @@
 <?php
-use webrium\foxql\db as DB;
+use webrium\foxql\DB;
 
-$config=[];
-
-$config=[
+/**
+ * set mysql config
+ */
+DB::addConfig('main',[
   'driver'=>'mysql' ,
   'db_host'=>'localhost' ,
   'db_host_port'=>3306 ,
@@ -12,6 +13,4 @@ $config=[
   'password'=>'1234' ,
   'charset'=>'utf8mb4' ,
   'result_stdClass'=>true
-];
-
-DB::addConfig('main',$config);
+]);
