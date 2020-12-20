@@ -13,6 +13,8 @@ class View
 
   private static function loadPath($view)
   {
+    Debug::$ErrorView=true;
+
     ob_start();
     File::run($view);
     $view = ob_get_clean();

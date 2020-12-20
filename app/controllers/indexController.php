@@ -12,7 +12,7 @@ class indexController
   {
 
 
-    
+
     $variable = 'salam';
 
     foreach ($variable as $key => $value) {

@@ -9,7 +9,7 @@ class Debug
 {
 
 
-  public static $ErrorView = false;
+  public static $ErrorView   = false;
 
   private static
   $WritErrorsStatus = true ,
@@ -178,14 +178,15 @@ class Debug
       $msg.="<br> Stack trace : <br>$file ";
     }
 
-
     if ($response_code!=false) {
       self::errorCode($response_code);
     }
 
     self::$HTML = $msg;
 
-    echo self::$HTML;
+    if (! Debug::$ErrorView) {
+      die(self::$HTML);
+    }
   }
 
   public static function error404()
